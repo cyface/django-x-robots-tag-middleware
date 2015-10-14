@@ -1,5 +1,6 @@
 # lines that begin with # are comments.
 *.db
+*.sqlite3
 *.db-journal
 *.egg-info
 *.log
