@@ -5,7 +5,7 @@ setup(
     version="0.1.5",
     url='http://timlwhite.com',
     license='BSD',
-    description="django-x-robots-tag-middleware enables setting the X-Robots-Tag header based on settings.",
+    description="Enables returning the X-Robots-Tag header based on Django settings.",
     long_description=open('README.rst').read(),
 
     author='Tim White',
