@@ -38,5 +38,5 @@ And add this config param:
 
 ``X_ROBOTS_TAG = ['noindex','nofollow']``
 
-Details about the values for the tag and what they do can be found `In the Google Documentation <https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?hl=en#using-the-x-robots-tag-http-header>`_.
+Details about the values for the tag and what they do can be found `in the Google Documentation <https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?hl=en#using-the-x-robots-tag-http-header>`_.
 
