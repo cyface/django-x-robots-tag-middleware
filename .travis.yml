@@ -4,7 +4,7 @@ python:
 cache: pip
 # command to install dependencies
 install:
-  - "pip install -r x_robots_tag_demo/requirements_dev.txt"
+  - "pip install -r x_robots_tag_middleware_demo/requirements_dev.txt"
 # command to run tests
 script: "python manage.py jenkins x_robots_tag_middleware --coverage-rcfile=devscripts/checkers/coveragerc"
 script: "coverage run --source=x_robots_tag_middleware,x_robots_tag_middleware_demo --rcfile=devscripts/checkers/coveragerc manage.py test"
