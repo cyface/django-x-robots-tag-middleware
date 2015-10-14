@@ -18,15 +18,15 @@ Installation
 
 From `pypi <https://pypi.python.org>`_::
 
-    $ pip install django-x-robots-middleware
+    $ pip install django-x-robots-tag-middleware
 
 or::
 
-    $ easy_install django-x-robots-middleware
+    $ easy_install django-x-robots-tag-middleware
 
 or clone from `github <http://github.com>`_::
 
-    $ git clone git://github.com/cyface/django-x-robots-middleware.git
+    $ git clone git://github.com/cyface/django-x-robots-tag-middleware.git
 
 
 Usage
