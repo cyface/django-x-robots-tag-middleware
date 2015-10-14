@@ -20,6 +20,7 @@
 build/*
 coverage.xml
 css-*_.css
+dist/*
 js-*_.js
 local_settings.py
 nosetests.xml
