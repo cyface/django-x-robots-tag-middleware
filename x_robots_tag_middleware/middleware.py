@@ -5,7 +5,7 @@ import logging
 
 LOGGER = logging.getLogger(name='x_robots_tag_middleware')
 
-class XRobotsMiddleware(object):
+class XRobotsTagMiddleware(object):
     """Adds X-Robots-Tag Based on Settings"""
 
     def process_response(self, request, response):

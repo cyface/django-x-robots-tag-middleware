@@ -47,7 +47,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'x_robots_tag_middleware.middleware.XRobotsMiddleware',
+    'x_robots_tag_middleware.middleware.XRobotsTagMiddleware',
 )
 
 ROOT_URLCONF = 'x_robots_tag_middleware_demo.urls'
