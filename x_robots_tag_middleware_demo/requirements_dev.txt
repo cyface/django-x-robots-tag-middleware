@@ -3,4 +3,3 @@ coverage
 coveralls
 django-jenkins
 pylint
-sphinx
