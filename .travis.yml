@@ -11,3 +11,7 @@ script: "coverage run --source=x_robots_tag_middleware,x_robots_tag_middleware_d
 sudo: false
 after_success:
   coveralls
+deploy:
+  provider: pypi
+  user: $pypi.username
+  password: $pypi.password
