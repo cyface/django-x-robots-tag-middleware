@@ -4,15 +4,23 @@ Django X-Robots-Tag Middleware
 
 .. image:: https://badge.fury.io/py/django-x-robots-tag-middleware.svg
   :target: http://badge.fury.io/py/django-x-robots-tag-middleware
+  :alt: PyPi Package Version
 
 .. image:: https://travis-ci.org/cyface/django-x-robots-tag-middleware.svg?branch=master
   :target: https://travis-ci.org/cyface/django-x-robots-tag-middleware
+  :alt: Travis Build Status
 
 .. image:: https://coveralls.io/repos/cyface/django-x-robots-tag-middleware/badge.svg?branch=master&service=github
   :target: https://coveralls.io/github/cyface/django-x-robots-tag-middleware?branch=master
+  :alt: Coveralls Code Coverage
 
 .. image:: https://scrutinizer-ci.com/g/cyface/django-x-robots-tag-middleware/badges/quality-score.png?b=master
   :target: https://scrutinizer-ci.com/g/cyface/django-x-robots-tag-middleware/?branch=master)
+  :alt: Scrutinizer Code Quality
+
+.. image:: https://readthedocs.org/projects/django-x-robots-tag-middleware/badge/?version=latest
+    :target: http://django-x-robots-tag-middleware.readthedocs.org/en/latest/?badge=latest
+    :alt: Documentation Status
 
 Simple Django middleware to use the ``X-Robots-Tag`` header based on a config param.
 
