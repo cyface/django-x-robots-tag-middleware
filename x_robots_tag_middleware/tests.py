@@ -3,6 +3,7 @@ import logging
 
 LOGGER = logging.getLogger(name='x_robots_tag_middleware')
 
+
 class XRobotsMiddlewareTests(TestCase):
     """Tests Terms and Conditions Module"""
 
