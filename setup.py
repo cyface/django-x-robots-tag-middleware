@@ -6,7 +6,7 @@ setup(
     url='http://timlwhite.com',
     license='BSD',
     description="Enables returning the X-Robots-Tag header based on Django settings.",
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
 
     author='Tim White',
     author_email='tim@cyface.com',

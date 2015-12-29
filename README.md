@@ -1,15 +1,13 @@
-===============================
 django-x-robots-middleware
 ===============================
 
-.. image:: https://badge.fury.io/py/django-x-robots-tag-middleware.svg
-    :target: http://badge.fury.io/py/django-x-robots-tag-middleware
+[![PyPi Version](https://badge.fury.io/py/django-x-robots-tag-middleware.svg)](http://badge.fury.io/py/django-x-robots-tag-middleware)
 
-.. image:: https://travis-ci.org/cyface/django-x-robots-tag-middleware.svg?branch=master
-    :target: https://travis-ci.org/cyface/django-x-robots-tag-middleware
+[![Travis CI Build](https://travis-ci.org/cyface/django-x-robots-tag-middleware.svg?branch=master)](https://travis-ci.org/cyface/django-x-robots-tag-middleware)
 
-.. image:: https://coveralls.io/repos/cyface/django-x-robots-tag-middleware/badge.svg?branch=master&service=github
-  :target: https://coveralls.io/github/cyface/django-x-robots-tag-middleware?branch=master
+[![Coveralls Code Coverage](https://coveralls.io/repos/cyface/django-x-robots-tag-middleware/badge.svg?branch=master&service=github)](https://coveralls.io/github/cyface/django-x-robots-tag-middleware?branch=master)
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cyface/django-x-robots-tag-middleware/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cyface/django-x-robots-tag-middleware/?branch=master)
 
 Simple Django middleware to use the ``X-Robots-Tag`` header based on a config param.
 
