@@ -14,6 +14,7 @@ setup(
     packages=find_packages(exclude=('x_robots_tag_middleware_demo', 'tests', 'devscripts')),
     include_package_data=True,
     zip_safe=False,
+    install_requires=['django>=1.9',],
 
     classifiers=[
         'Development Status :: 5 - Production/Stable',
