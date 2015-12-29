@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-x-robots-tag-middleware",
-    version="1.1",
+    version="1.2",
     url='http://timlwhite.com',
     license='BSD',
     description="Enables returning the X-Robots-Tag header based on Django settings.",
