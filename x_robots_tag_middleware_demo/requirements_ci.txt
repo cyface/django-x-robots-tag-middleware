@@ -1,6 +1,5 @@
-django-jenkins==0.18.1
 coverage
 coveralls
-django-jenkins
+django-jenkins==0.18.1
 pylint
 sphinx
