@@ -30,3 +30,5 @@ settings_local.py
 settings_local_test.py
 settings_test_local.py
 style-*_.css
+.virtualenv
+.virtualenv3
