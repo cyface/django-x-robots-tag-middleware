@@ -31,15 +31,6 @@ From `pypi <https://pypi.python.org>`_::
 
     $ pip install django-x-robots-tag-middleware
 
-or::
-
-    $ easy_install django-x-robots-tag-middleware
-
-or clone from `github <http://github.com>`_::
-
-    $ git clone git://github.com/cyface/django-x-robots-tag-middleware.git
-
-
 Usage
 -----
 
