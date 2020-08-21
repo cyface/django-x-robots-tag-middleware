@@ -10,7 +10,7 @@ class XRobotsMiddlewareTests(TestCase):
     def test_middleware(self):
         """
             Validate that a middleware sets X-Robots-Tag
-            Depends on settings and setup in the _demo proj
+            Depends on settings and setup in the _demo project
         """
 
         LOGGER.debug('Test Middleware')
