@@ -1,6 +1,4 @@
 -r requirements.txt
 coverage
-coveralls
-django-jenkins
-pylint
+flak8
 sphinx
