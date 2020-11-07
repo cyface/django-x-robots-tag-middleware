@@ -31,7 +31,7 @@ jobs:
       run: |
         python manage.py test
     - name: codecov-umbrella
-    - uses: codecov/codecov-action@v1
+      uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: ./coverage.xml
