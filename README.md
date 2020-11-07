@@ -20,3 +20,4 @@ Usage
 2. Add ``X_ROBOTS_TAG = ["noindex", "nofollow"]`` to your settings.py with the values you want for the X_ROBOTS_TAG.
 
 Details about the values for the tag and what they do can be found [in the Google Documentation](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?hl=en#using-the-x-robots-tag-http-header).
+
