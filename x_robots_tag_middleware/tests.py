@@ -1,7 +1,7 @@
-from django.test import TestCase
+from django.test import TestCase, override_settings
 import logging
 
-LOGGER = logging.getLogger(name='x_robots_tag_middleware')
+logger = logging.getLogger(__name__)
 
 
 class XRobotsMiddlewareTests(TestCase):
@@ -13,7 +13,18 @@ class XRobotsMiddlewareTests(TestCase):
             Depends on settings and setup in the _demo project
         """
 
-        LOGGER.debug('Test Middleware')
+        logger.debug('Test Middleware')
         response = self.client.get('/')
         self.assertIn('x-robots-tag', response._headers)
         self.assertEqual(response._headers.get('x-robots-tag', ''), ('X-Robots-Tag', 'noindex,nofollow'))
+
+    @override_settings(X_ROBOTS_TAG=None)
+    def test_middleware_no_setting(self):
+        """
+            Validate that a middleware sets X-Robots-Tag
+            Depends on settings and setup in the _demo project
+        """
+
+        logger.debug('Test Middleware No Setting')
+        response = self.client.get('/')
+        self.assertNotIn('x-robots-tag', response._headers)
