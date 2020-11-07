@@ -28,3 +28,4 @@ class XRobotsMiddlewareTests(TestCase):
         logger.debug('Test Middleware No Setting')
         response = self.client.get('/')
         self.assertNotIn('x-robots-tag', response._headers)
+        self.assertContains(response, "This is the test page!")
