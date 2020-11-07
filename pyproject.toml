@@ -1,0 +1,16 @@
+[tool.coverage.run]
+branch = True
+
+omit = [
+	*/__init__.py,
+  */apps.py,
+	*/devscripts*,
+	*/docs/*,
+	*/local_settings_template.py,
+	*/manage.py,
+	*/migrations/*,
+	*/settings*,
+	*/setup.py,
+	*/tests*,
+	*/wsgi.py
+]
