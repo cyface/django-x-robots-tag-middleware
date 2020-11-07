@@ -1,5 +1,1 @@
--r requirements.txt 
-
-coverage|toml
-flake8
-sphinx
+-r requirements_dev.txt
