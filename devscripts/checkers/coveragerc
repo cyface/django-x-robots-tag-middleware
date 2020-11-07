@@ -3,15 +3,17 @@
 branch = True
 
 omit =
-	*/settings*
-	*/tests*
-	*/manage.py
-	*/migrations/*
+	*/__init__.py
+        */apps.py
 	*/devscripts*
 	*/docs/*
 	*/local_settings_template.py
+	*/manage.py
+	*/migrations/*
+	*/settings*
+	*/setup.py
+	*/tests*
 	*/wsgi.py
-	*/__init__.py
 
 [report]
 # Regexes for lines to exclude from consideration
