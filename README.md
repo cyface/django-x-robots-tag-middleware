@@ -5,7 +5,7 @@ Django X-Robots-Tag Middleware
 
 ![Python package](https://github.com/cyface/django-x-robots-tag-middleware/workflows/Python%20package/badge.svg)
 
-[![Coveralls Code Coverage](https://coveralls.io/repos/cyface/django-x-robots-tag-middleware/badge.svg?branch=master&service=github)](https://coveralls.io/github/cyface/django-x-robots-tag-middleware?branch=master)
+[![codecov](https://codecov.io/gh/cyface/django-x-robots-tag-middleware/branch/master/graph/badge.svg?token=RvtjZ2bngZ)](https://codecov.io/gh/cyface/django-x-robots-tag-middleware)
   
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cyface/django-x-robots-tag-middleware/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cyface/django-x-robots-tag-middleware/?branch=master)
 
