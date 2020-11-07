@@ -42,8 +42,7 @@ jobs:
           poetry install
       - name: Test
         run: |
-          source .venv/bin/activate
-          poetry run python manage.py test
+          poetry run test
           poetry run coverage xml
       - name: codecov-umbrella
         uses: codecov/codecov-action@v1

@@ -37,3 +37,6 @@ Django = ">1.10"
 coverage = "^5.3"
 black = "^20.8b1"
 Sphinx = "^3.3.0"
+
+[tool.poetry.scripts]
+test = "python manage.py test"
