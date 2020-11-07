@@ -16,7 +16,7 @@ Simple Django middleware to use the ``X-Robots-Tag`` header based on a config pa
 Installation
 ------------
 
-From `pypi <https://pypi.python.org>`_::
+From `pypi <https://pypi.python.org>`
 
     $ pip install django-x-robots-tag-middleware
 
