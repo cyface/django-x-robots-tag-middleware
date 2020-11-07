@@ -1,4 +1,4 @@
 -r requirements.txt
 coverage[toml]
-flak8
+flake8
 sphinx
