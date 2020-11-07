@@ -1,5 +1,5 @@
 -r requirements.txt 
 
-coverage
+coverage|toml
 flake8
 sphinx
