@@ -1,9 +1,9 @@
 [tool.coverage.run]
-branch = True
+branch = true
 
 omit = [
 	*/__init__.py,
-  */apps.py,
+	*/apps.py,
 	*/devscripts*,
 	*/docs/*,
 	*/local_settings_template.py,
