@@ -7,7 +7,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="django-x-robots-tag-middleware",
-    version="1.3.2",
+    version="1.3.3",
     url="https://github.com/cyface/django-x-robots-tag-middleware",
     license="MIT",
     description="Enables returning the X-Robots-Tag header based on Django settings.",
