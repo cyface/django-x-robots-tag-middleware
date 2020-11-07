@@ -10,8 +10,7 @@ env:
 install:
   - pip install $DJANGO
   - pip install -r x_robots_tag_middleware_demo/requirements_ci.txt
-script: coverage run --source=x_robots_tag_middleware,x_robots_tag_middleware_demo
-  --rcfile=devscripts/checkers/coveragerc manage.py test
+script: coverage run --source=x_robots_tag_middleware,x_robots_tag_middleware_demo --rcfile=devscripts/checkers/coveragerc manage.py test
 sudo: false
 after_success: coveralls
 deploy:
