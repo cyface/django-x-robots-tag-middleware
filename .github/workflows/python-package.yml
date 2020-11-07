@@ -29,7 +29,7 @@ jobs:
         pip install -r x_robots_tag_middleware_demo/requirements_ci.txt
     - name: Test
       run: |
-        coverage run --source='.' manage.py test
+        coverage run --rcfile='./devscripts/checkers/coveragerc' --source='.' manage.py test
         coverage xml
     - name: codecov-umbrella
       uses: codecov/codecov-action@v1
