@@ -42,7 +42,7 @@ jobs:
           poetry install
       - name: Test
         run: |
-          poetry run python manage.py test
+          poetry run coverage run manage.py test
           poetry run coverage xml
       - name: codecov-umbrella
         uses: codecov/codecov-action@v1
