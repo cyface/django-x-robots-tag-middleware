@@ -1,5 +1,0 @@
--r requirements.txt
-black
-coverage[toml]
-flake8
-sphinx
