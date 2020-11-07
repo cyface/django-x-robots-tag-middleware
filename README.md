@@ -3,7 +3,7 @@ Django X-Robots-Tag Middleware
 
 [![PyPi Package Version](https://badge.fury.io/py/django-x-robots-tag-middleware.svg)](http://badge.fury.io/py/django-x-robots-tag-middleware) ![Python package](https://github.com/cyface/django-x-robots-tag-middleware/workflows/Python%20package/badge.svg) [![codecov](https://codecov.io/gh/cyface/django-x-robots-tag-middleware/branch/master/graph/badge.svg?token=RvtjZ2bngZ)](https://codecov.io/gh/cyface/django-x-robots-tag-middleware) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cyface/django-x-robots-tag-middleware/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cyface/django-x-robots-tag-middleware/?branch=master) [![Documentation Status](https://readthedocs.org/projects/django-x-robots-tag-middleware/badge/?version=latest)](http://django-x-robots-tag-middleware.readthedocs.org/en/latest/?badge=latest)
 
-Simple Django middleware to send the ``X-Robots-Tag`` header to all URLs.
+Simple Django middleware to send the ``X-Robots-Tag`` header to all URLs.  Useful for ensuring a site in development is not accidentally picked up and indexed until it is ready.
 
 Installation
 ------------
