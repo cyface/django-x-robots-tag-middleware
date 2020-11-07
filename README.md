@@ -3,7 +3,7 @@ Django X-Robots-Tag Middleware
 
 [![PyPi Package Version](https://badge.fury.io/py/django-x-robots-tag-middleware.svg)](http://badge.fury.io/py/django-x-robots-tag-middleware)
 
-[![Build Status](https://travis-ci.org/cyface/django-x-robots-tag-middleware.svg?branch=master)](https://travis-ci.org/cyface/django-x-robots-tag-middleware)
+![Python package](https://github.com/cyface/django-x-robots-tag-middleware/workflows/Python%20package/badge.svg)
 
 [![Coveralls Code Coverage](https://coveralls.io/repos/cyface/django-x-robots-tag-middleware/badge.svg?branch=master&service=github)](https://coveralls.io/github/cyface/django-x-robots-tag-middleware?branch=master)
   
