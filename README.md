@@ -15,7 +15,7 @@ From [pypi](https://pypi.python.org):
 Usage
 -----
 
-1. Add ``"x_robots_middleware.XRobotsMiddleware",`` to your middleware list in settings.py.
+1. Add ``"x_robots_tag_middleware.middleware.XRobotsTagMiddleware",`` to your middleware list in settings.py.
 
 2. Add ``X_ROBOTS_TAG = ["noindex", "nofollow"]`` to your settings.py with the values you want for the X_ROBOTS_TAG.
 
