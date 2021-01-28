@@ -18,6 +18,6 @@ class XRobotsTagMiddleware(object):
 
         if settings.X_ROBOTS_TAG:
             response["X-Robots-Tag"] = ",".join(settings.X_ROBOTS_TAG)
-            logger.debug(f"x_robots_tag: {settings.X_ROBOTS_TAG}")
+            logger.debug("x_robots_tag: %s", settings.X_ROBOTS_TAG)
 
         return response
