@@ -58,5 +58,5 @@ python = "^3.6"
 Django = ">1.10"
 
 [tool.poetry.dev-dependencies]
-coverage = "^5.3"
+coverage = "^5.5"
 black = "^20.8b1"
