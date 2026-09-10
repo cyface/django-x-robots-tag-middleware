@@ -4,6 +4,9 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+    # This is a library: keep the permissive bounds in pyproject.toml and let
+    # Dependabot update only uv.lock, which is dev/CI-only and never published.
+    versioning-strategy: lockfile-only
     open-pull-requests-limit: 10
     groups:
       python-dependencies:
