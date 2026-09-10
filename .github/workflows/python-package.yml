@@ -71,14 +71,14 @@ jobs:
           uv run --no-sync coverage xml
           uv run --no-sync coverage report
       - name: Upload coverage to Codecov
-        # Dependabot and fork pull requests cannot read the repository's Actions
-        # secrets, so CODECOV_TOKEN is empty there and the upload fails hard
-        # under fail_ci_if_error. Skip the upload for those; the tests above
-        # still gate the PR.
+        # Fork pull requests cannot read repository secrets, so CODECOV_TOKEN is
+        # empty there and the upload would fail hard under fail_ci_if_error.
+        # Skip it for forks; the tests above still gate the PR. Dependabot runs
+        # do upload, using CODECOV_TOKEN from the separate Dependabot secret
+        # store.
         if: >-
-          github.actor != 'dependabot[bot]'
-          && (github.event_name != 'pull_request'
-              || github.event.pull_request.head.repo.full_name == github.repository)
+          github.event_name != 'pull_request'
+          || github.event.pull_request.head.repo.full_name == github.repository
         uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
