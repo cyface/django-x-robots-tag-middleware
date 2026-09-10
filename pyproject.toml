@@ -41,7 +41,7 @@ Changelog = "https://github.com/cyface/django-x-robots-tag-middleware/releases"
 [dependency-groups]
 # coverage needs the [toml] extra to read its config from pyproject.toml on
 # Python 3.10, where tomllib is not yet in the standard library.
-dev = ["coverage[toml]>=7.6", "ruff>=0.9"]
+dev = ["coverage[toml]>=7.6", "pre-commit>=4.0", "ruff>=0.9"]
 
 [tool.uv.build-backend]
 # Flat layout: the package sits at the repository root, not under src/.

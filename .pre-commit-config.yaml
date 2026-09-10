@@ -6,8 +6,12 @@ repos:
       - id: check-merge-conflict
       - id: check-toml
       - id: check-yaml
+      # WebStorm rewrites .idea/*.xml without a trailing newline, so let the
+      # IDE own the whitespace in those files rather than fighting it here.
       - id: end-of-file-fixer
+        exclude: ^\.idea/
       - id: trailing-whitespace
+        exclude: ^\.idea/
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.16.6

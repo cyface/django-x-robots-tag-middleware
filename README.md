@@ -82,7 +82,7 @@ $ uv run --no-sync python manage.py test
 Optionally, install the pre-commit hooks:
 
 ```console
-$ uvx pre-commit install
+$ uv run pre-commit install
 ```
 
 The tests run against the `x_robots_tag_middleware_demo` project included in this repo.
