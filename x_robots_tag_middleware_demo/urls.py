@@ -1,8 +1,8 @@
-"""django_x_robots_middleware URL Configuration
+"""URL configuration for the demo project."""
 
-"""
-from django.conf.urls import include, url
-
+from django.urls import path
 from django.views.generic.base import TemplateView
 
-urlpatterns = [url(r"^$", TemplateView.as_view(template_name="index.html"))]
+urlpatterns = [
+    path("", TemplateView.as_view(template_name="index.html"), name="index"),
+]

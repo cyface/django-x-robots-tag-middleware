@@ -1,4 +1,4 @@
-"""Django Apps Config"""
+"""Django app config."""
 
 from django.apps import AppConfig
 

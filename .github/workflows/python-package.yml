@@ -1,53 +1,79 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
+# Lints and tests the package against the supported Python and Django versions.
 name: Python package
 
 on:
   push:
-    branches: [ master ]
+    branches: [main]
   pull_request:
-    branches: [ master ]
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.0.1
+        with:
+          enable-cache: true
+          python-version: "3.13"
+      - name: Install dependencies
+        # --locked fails the build if uv.lock is out of date with pyproject.toml.
+        run: uv sync --locked --group dev
+      - name: Ruff check
+        run: uv run --no-sync ruff check --output-format=github .
+      - name: Ruff format
+        run: uv run --no-sync ruff format --check --diff .
 
+  test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        python-version: [ 3.6, 3.7, 3.8 ]
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+        django-version: ["5.2", "6.0", "6.1"]
+        exclude:
+          # Django 6.0+ requires Python 3.12 or newer.
+          - python-version: "3.10"
+            django-version: "6.0"
+          - python-version: "3.10"
+            django-version: "6.1"
+          - python-version: "3.11"
+            django-version: "6.0"
+          - python-version: "3.11"
+            django-version: "6.1"
 
+    name: Python ${{ matrix.python-version }} / Django ${{ matrix.django-version }}
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+      - uses: actions/checkout@v7
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.0.1
         with:
+          enable-cache: true
           python-version: ${{ matrix.python-version }}
-      - name: Install Poetry
-        uses: snok/install-poetry@v1.0.0
-        with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v2
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-      - name: Install dependencies via poetry
-        run: poetry install
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       - name: Install dependencies
+        # Sync the locked dev tools, then pin the Django version under test.
         run: |
-          poetry install
+          uv sync --locked --group dev
+          uv pip install "Django~=${{ matrix.django-version }}.0"
+      - name: Run Django system checks
+        run: uv run --no-sync python manage.py check
       - name: Test
         run: |
-          poetry run coverage run manage.py test
-          poetry run coverage xml
-      - name: codecov-umbrella
-        uses: codecov/codecov-action@v1
+          uv run --no-sync coverage run manage.py test
+          uv run --no-sync coverage xml
+          uv run --no-sync coverage report
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./coverage.xml
+          files: ./coverage.xml
           fail_ci_if_error: true
           verbose: true
